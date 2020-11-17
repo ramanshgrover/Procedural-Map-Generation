@@ -404,7 +404,7 @@ class Pix2Pix():
         cmap: cmap to use with matplotlib
         returns: an output image at filename `out_name`.
         """
-        import image_grid
+        import grid
         assert mode in ['row', 'matrix']
         fn = self.z_fn if not deterministic else self.z_fn_det
         # TODO: currently does not work with non-greyscale images
@@ -438,7 +438,7 @@ class Pix2Pix():
                     grid[y][x] = convert_to_rgb(
                         tmp[0], is_grayscale=self.is_a_grayscale)
                     ctr += 1
-        image_grid.write_image_grid(out_name, grid, figsize=figsize, cmap=cmap)
+        grid.write_image_grid(out_name, grid, figsize=figsize, cmap=cmap)
 
     def generate_interpolation_clip(self, num_samples, batch_size, out_dir, deterministic=True, min_max_norm=False, concat=False):
         """

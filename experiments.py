@@ -33,8 +33,8 @@ if __name__ == '__main__':
             gen_params_dcgan={'num_repeats': 0, 'div': [2, 2, 4, 4, 8, 8, 8]},
             disc_params_dcgan={'num_repeats': 0, 'bn': False,
                                'nonlinearity': linear, 'div': [8, 4, 4, 4, 2, 2, 2]},
-            gen_fn_p2p=p2p.g_unet,
-            disc_fn_p2p=p2p.discriminator,
+            gen_fn_p2p=pix2pix.g_unet,
+            disc_fn_p2p=pix2pix.discriminator,
             gen_params_p2p={'nf': 64, 'act': tanh, 'num_repeats': 0},
             disc_params_p2p={'nf': 64, 'bn': False, 'num_repeats': 0,
                              'act': linear, 'mul_factor': [1, 2, 4, 8]},
@@ -65,7 +65,7 @@ if __name__ == '__main__':
 
     def test1_nobn_finetunep2p_bilin(mode):
         assert mode in ["train", "interp", "gen"]
-        from architectures import p2p, dcgan
+        from Architectures import pix2pix, dcgan
         # change the p2p discriminator
         model = Pix2Pix(
             gen_fn_dcgan=dcgan.default_generator,
@@ -73,8 +73,8 @@ if __name__ == '__main__':
             gen_params_dcgan={'num_repeats': 0, 'div': [2, 2, 4, 4, 8, 8, 8]},
             disc_params_dcgan={'num_repeats': 0, 'bn': False,
                                'nonlinearity': linear, 'div': [8, 4, 4, 4, 2, 2, 2]},
-            gen_fn_p2p=p2p.g_unet,
-            disc_fn_p2p=p2p.discriminator,
+            gen_fn_p2p=pix2pix.g_unet,
+            disc_fn_p2p=pix2pix.discriminator,
             gen_params_p2p={'nf': 64, 'act': tanh,
                             'num_repeats': 0, 'bilinear_upsample': True},
             disc_params_p2p={'nf': 64, 'bn': False, 'num_repeats': 0,
@@ -112,7 +112,7 @@ if __name__ == '__main__':
 
     def test1_nobn_bilin_both(mode):
         assert mode in ["train", "interp", "gen"]
-        from architectures import p2p, dcgan
+        from Architectures import pix2pix, dcgan
         # change the p2p discriminator
         model = Pix2Pix(
             gen_fn_dcgan=dcgan.default_generator,
@@ -120,8 +120,8 @@ if __name__ == '__main__':
             gen_params_dcgan={'num_repeats': 0, 'div': [2, 2, 4, 4, 8, 8, 8]},
             disc_params_dcgan={'num_repeats': 0, 'bn': False,
                                'nonlinearity': linear, 'div': [8, 4, 4, 4, 2, 2, 2]},
-            gen_fn_p2p=p2p.g_unet,
-            disc_fn_p2p=p2p.discriminator,
+            gen_fn_p2p=pix2pix.g_unet,
+            disc_fn_p2p=pix2pix.discriminator,
             gen_params_p2p={'nf': 64, 'act': tanh,
                             'num_repeats': 0, 'bilinear_upsample': True},
             disc_params_p2p={'nf': 64, 'bn': False, 'num_repeats': 0,

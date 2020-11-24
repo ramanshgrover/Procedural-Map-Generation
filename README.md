@@ -32,7 +32,7 @@ pip3 install -r requirements.txt
 ## Data Acquisition
 For the purpose of this project, we decided to utilise heightmap data generated from a Procedural Map Generator as the scope of this exploratory experiment is to examine the capabilities of Deep Generative Networks when contrasted with existing Procedural Map Generators. Moreover, it seemed more appropriate as there already exists literature with variations of (real-life) high resolution NASA heightmap and terrain data. We opted for Azgaar’s [Fantasy Map Generator](https://github.com/Azgaar/Fantasy-Map-Generator) which is based and inspired off of Martin O'Leary's [Generating Fantasy Maps](http://mewo2.com/notes/terrain/), Amit Patel's [Polygonal Map Generation for Games](www-cs-students.stanford.edu/~amitp/game-programming/polygon-map-generation), and Scott Turner's [Here Dragons Abound](https://heredragonsabound.blogspot.com/) and provides a wide array of customisable options. We generated and fetched about 6000 simple height maps and their equivalent texture maps (as adding rivers, provinces, and other terrain parameters complicated the problem) with an automated [fetch script](https://github.com/ramanshgrover/Procedural-Map-Generation/blob/master/Data/fetch.ipynb). As expected of noise-based algorithmic procedural map generators, we observed similar recurrent iterations of maps generated after every few epochs which contributes to the specificity and limitation of the dataset used. Some sample datapoints can be seen below and the generated dataset can be found [here](https://drive.google.com/drive/folders/1kR7Ilj2McrhY4wTYyZALRhkcKYpiDvCe?usp=sharing). Download and Extract it into the `Data/Maps/` directory.
 
-<center>![Dataset](https://github.com/ramanshgrover/Procedural-Map-Generation/blob/master/Images/dataset.png)</center>
+![Dataset](https://github.com/ramanshgrover/Procedural-Map-Generation/blob/master/Images/dataset.png)
 
 ## Methodology
 ### Experimentation
@@ -69,7 +69,7 @@ r, g, and b are the respective values of red, green and blue in the original pix
  
 From these grey pixel values, height (intensity) values are obtained by scaling them to get a value between 0 and 1. As mentioned in the previous section, a slight blur is applied with a Gaussian Kernel Convolution on the final heightmaps to accommodate for any sharp / rigid edges and irregularities, making the final render smoother and continuous. We use the height values obtained from the grayscale image as the  coordinate to plot the 3D map. Finally, the respective texture mesh is placed over the 3D Visualization and the final 3D map is then saved as an HTML file for viewing. You can check out a sample visualization within our [Data Visualisation Notebook](https://github.com/ramanshgrover/Procedural-Map-Generation/blob/master/Data%20Visualization.ipynb)
 
-<center>![visualisation](https://github.com/ramanshgrover/Procedural-Map-Generation/blob/master/Images/smooth.png)</center>
+![visualisation](https://github.com/ramanshgrover/Procedural-Map-Generation/blob/master/Images/smooth.png)
 
 ### Future Work
  * Better Handcrafted Dataset

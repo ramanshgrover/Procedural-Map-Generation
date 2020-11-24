@@ -1,5 +1,5 @@
 # Procedural-Map-Generation
-Procedural Fantasy Map Generation using DCGAN jointly trained with pix2pix GAN.
+Procedural Fantasy Map Generation using DCGAN trained in conjunction with a pix2pix GAN.
 
 ## Table of Contents
   1. [Motivation](#Motivation)

@@ -13,7 +13,7 @@ In Computer Graphics and Virtual Environment Development, a large portion of tim
 So far, maps have been procedurally generated through a host of algorithms designed to mimic real-life cartography. Given the advent of Deep Learning, it would only seem like a relevant and exciting endeavour to leverage the power of generative networks (such as Generative Adversarial Networks ([Goodfellow et al., 2014](https://arxiv.org/pdf/1406.2661.pdf))) to learn algorithms to automatically generate maps, without the need to manually write algorithms to do so. Therefore, We aim to create a  fantasy map generator utilising GANs to the most of their potential for effectively automating the generation process (without human involvement) and developing non-algorithmic map generators.
  
 ## Prerequisites and Dependencies
-Ensure that you have [Python 3.5+](https://www.python.org/downloads/) and [pip3](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py) installed on your specific OS distribution.
+Ensure that you have [Python 3.5+](https://www.python.org/downloads/) and [pip3](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py) installed on your machine.
 
 Clone the repository and create a virtual environment.
 ```shell

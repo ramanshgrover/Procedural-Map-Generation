@@ -69,7 +69,7 @@ r, g, and b are the respective values of red, green and blue in the original pix
  
 From these grey pixel values, height (intensity) values are obtained by scaling them to get a value between 0 and 1. As mentioned in the previous section, a slight blur is applied with a Gaussian Kernel Convolution on the final heightmaps to accommodate for any sharp / rigid edges and irregularities, making the final render smoother and continuous. We use the height values obtained from the grayscale image as the  coordinate to plot the 3D map. Finally, the respective texture mesh is placed over the 3D Visualization and the final 3D map is then saved as an HTML file for viewing. You can check out a sample visualization within our [Data Visualisation Notebook](https://github.com/ramanshgrover/Procedural-Map-Generation/blob/master/Data%20Visualization.ipynb)
 
-![visualisation](https://github.com/ramanshgrover/Procedural-Map-Generation/blob/master/Images/smooth.png)
+![visualisation](https://github.com/ramanshgrover/Procedural-Map-Generation/blob/master/Images/newplot.png)
 
 ### Future Work
  * Better Handcrafted Dataset
